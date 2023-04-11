@@ -13,7 +13,7 @@ const Exercise = () => {
   const [exercise, setExercise] = useState()
 
   useEffect(()=> {
-    axios.get(`http://localhost:3000/class/exercise/${classId}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/exercise/${classId}`)
       .then(async(res) => {
         setExercise(res.data)
       })

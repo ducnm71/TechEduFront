@@ -25,10 +25,10 @@ const TClass = () => {
 
   const id = localStorage.getItem("id")
   const name = localStorage.getItem("name")
-  const [dataClases, setdataClases] = useState()
+  const [dataClases, setdataClases] = useState()  
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/class/teacher/${id}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/teacher/${id}`)
     .then(res =>{
       setdataClases(res.data)
     })
@@ -37,7 +37,7 @@ const TClass = () => {
 
   const handleCreate = async (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:3000/class/create`,{
+    axios.post(`https://weak-pink-cockroach-sari.cyclic.app/class/create`,{
       id: input.id,
       name: input.name,
       img: input.img,

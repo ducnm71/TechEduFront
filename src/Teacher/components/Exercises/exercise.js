@@ -19,7 +19,7 @@ const Exercise = () => {
 
 const handleUpload = async (e) => {
     e.preventDefault()
-    await axios.put('http://localhost:3000/class/uploadExercise',{
+    await axios.put('https://weak-pink-cockroach-sari.cyclic.app/class/uploadExercise',{
       name: input.name,
       link: input.link,
       from: input.from,
@@ -39,7 +39,7 @@ const handleUpload = async (e) => {
     
   }
   useEffect(()=> {
-    axios.get(`http://localhost:3000/class/exercise/${classId}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/exercise/${classId}`)
       .then(async(res) => {
         setExercise(res.data)
       })

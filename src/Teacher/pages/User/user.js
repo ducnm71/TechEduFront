@@ -11,7 +11,7 @@ const TUser = () => {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/teacher/in4/${id}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/teacher/in4/${id}`)
       .then((res) => {
         setIn4(res.data);
       })

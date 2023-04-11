@@ -10,7 +10,7 @@ const Member = () => {
   const defaultOption = options[0];
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/class/member/${classId}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/member/${classId}`)
       .then((res) => {
         setStudent(res.data)
       })

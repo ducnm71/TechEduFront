@@ -13,7 +13,7 @@ const Exercise = () => {
   const defaultOption = options[0];
 
   useEffect(()=> {
-    axios.get(`http://localhost:3000/class/document/${classId}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/document/${classId}`)
       .then(async(res) => {
         setDocument(res.data)
       })

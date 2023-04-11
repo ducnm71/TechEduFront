@@ -10,7 +10,7 @@ const Resources = () => {
   const [total, setTotal] = useState()
   const [detail, setDetail] = useState()
   useEffect(() => {
-    axios.get(`http://localhost:3000/resources/detail/${current}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/resources/detail/${current}`)
       .then((res) => {
         setDetail(res.data.result)
         setTotal(res.data.count)

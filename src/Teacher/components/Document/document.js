@@ -17,7 +17,7 @@ const Document = () => {
   const [document, setDocument] = useState()
 
   useEffect(()=> {
-    axios.get(`http://localhost:3000/class/document/${classId}`)
+    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/document/${classId}`)
       .then(async(res) => {
         setDocument(res.data)
       })
@@ -29,7 +29,7 @@ const Document = () => {
   const handleUpload = async (e) => {
 
     e.preventDefault()
-    await axios.put('http://localhost:3000/class/uploadDocument',{
+    await axios.put('https://weak-pink-cockroach-sari.cyclic.app/class/uploadDocument',{
       name: input.name,
       link: input.link,
       date: new Date().toLocaleDateString(),
