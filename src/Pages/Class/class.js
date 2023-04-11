@@ -124,7 +124,7 @@ const Class = () => {
                 await localStorage.setItem("teacherName", classItem.teacherName)
                 return(
                   setTimeout(() => {
-                    window.location.replace(`http://localhost:3001/class/detail/${classItem._id}`)
+                    window.location.replace(`https://tech-edu.vercel.app/class/detail/${classItem._id}`)
                   },2000)
                   
                 
