@@ -56,7 +56,7 @@ const submitFormLogin = async (e) => {
         console.log(res.data);
         toast.success("Sign in successfully!");
         setTimeout(() =>{
-            window.location.replace("https://tech-edu.vercel.app/")
+            window.location.replace("http://localhost:3001/")
         }, 1500)
         await localStorage.setItem("jwt", res.data.jwt)
         await localStorage.setItem("role", user.role)
@@ -83,7 +83,7 @@ const submitFormRegist = async (e) =>{
             await localStorage.setItem("jwt", res.data.jwt)
             await localStorage.setItem("role", register.role)
             setTimeout(() => {
-                window.location.replace("https://tech-edu.vercel.app/")
+                window.location.replace("http://localhost:3001/")
             }, 1500)
         })
         .catch(error=> {

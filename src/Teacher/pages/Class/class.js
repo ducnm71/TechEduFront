@@ -120,7 +120,7 @@ const TClass = () => {
                 await localStorage.setItem("classId", classItem.id)
                 await localStorage.setItem("teacherImg", classItem.teacherImg)
                 setTimeout(() => {
-                    window.location.replace(`https://tech-edu.vercel.app/detail/${classItem._id}`)
+                    window.location.replace(`http://localhost:3001/detail/${classItem._id}`)
                   },2000)
                   
                 
