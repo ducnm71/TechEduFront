@@ -24,7 +24,7 @@ const Class = () => {
         Authorization: 'Bearer ' + token
       }
     }
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/find/${className}`, config)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/find/${className}`, config)
       .then((res) => {
         setclassName('')
         toast.success('Join the class successfully')
@@ -41,7 +41,7 @@ const Class = () => {
   const id = localStorage.getItem("id")
   const [dataClases, setdataClases] = useState()
   useEffect(() => {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/student/${id}`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/student/${id}`)
     .then(res =>{
       const dataClases = res.data
       setdataClases(dataClases)
@@ -49,7 +49,7 @@ const Class = () => {
   }, [className,id])
 
   useEffect(() => {
-    axios.get('https://weak-pink-cockroach-sari.cyclic.app/class/all')
+    axios.get('https://gold-shiny-lemming.cyclic.cloud/class/all')
     .then((res) => {
       console.log(res.data);
       setClasses(res.data)

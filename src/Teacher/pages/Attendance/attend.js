@@ -7,7 +7,7 @@ const TAttend = () => {
 
   const [students, setStudent] = useState();
   useEffect(() => {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/teacher/member`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/teacher/member`)
       .then((res) => {
         setStudent(res.data)
       })

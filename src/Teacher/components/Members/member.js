@@ -10,7 +10,7 @@ const Member = () => {
   const defaultOption = options[0];
 
   useEffect(() => {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/member/${classId}`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/member/${classId}`)
       .then((res) => {
         setStudent(res.data)
       })

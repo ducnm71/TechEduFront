@@ -6,7 +6,7 @@ const Member = (props) => {
   const [students, setStudent] = useState();
   const classId = localStorage.getItem("classId")
   useEffect(() => {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/member/${classId}`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/member/${classId}`)
       .then((res) => {
         setStudent(res.data)
       })

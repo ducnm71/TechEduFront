@@ -46,7 +46,7 @@ const Login = () => {
 
 const submitFormLogin = async (e) => {
     e.preventDefault()
-    await axios.post(`https://weak-pink-cockroach-sari.cyclic.app/${user.role}/login`,
+    await axios.post(`https://gold-shiny-lemming.cyclic.cloud/${user.role}/login`,
     {
         email: user.email,
         password: user.password
@@ -71,7 +71,7 @@ const submitFormLogin = async (e) => {
 
 const submitFormRegist = async (e) =>{
     e.preventDefault()
-    await axios.post(`https://weak-pink-cockroach-sari.cyclic.app/${register.role}/register`,
+    await axios.post(`https://gold-shiny-lemming.cyclic.cloud/${register.role}/register`,
         {
         name: register.name,
         email: register.email,

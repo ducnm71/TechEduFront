@@ -28,7 +28,7 @@ const TClass = () => {
   const [dataClases, setdataClases] = useState()  
 
   useEffect(() => {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/teacher/${id}`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/teacher/${id}`)
     .then(res =>{
       setdataClases(res.data)
     })
@@ -37,7 +37,7 @@ const TClass = () => {
 
   const handleCreate = async (e) => {
     e.preventDefault()
-    axios.post(`https://weak-pink-cockroach-sari.cyclic.app/class/create`,{
+    axios.post(`https://gold-shiny-lemming.cyclic.cloud/class/create`,{
       id: input.id,
       name: input.name,
       img: input.img,

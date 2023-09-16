@@ -17,7 +17,7 @@ const Document = () => {
   const [document, setDocument] = useState()
 
   useEffect(()=> {
-    axios.get(`https://weak-pink-cockroach-sari.cyclic.app/class/document/${classId}`)
+    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/document/${classId}`)
       .then(async(res) => {
         setDocument(res.data)
       })
@@ -29,7 +29,7 @@ const Document = () => {
   const handleUpload = async (e) => {
 
     e.preventDefault()
-    await axios.put('https://weak-pink-cockroach-sari.cyclic.app/class/uploadDocument',{
+    await axios.put('https://gold-shiny-lemming.cyclic.cloud/class/uploadDocument',{
       name: input.name,
       link: input.link,
       date: new Date().toLocaleDateString(),
