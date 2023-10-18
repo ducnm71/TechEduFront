@@ -16,7 +16,7 @@ const Class = () => {
   const handleJoin = (e) => {
     e.preventDefault()
     const token = localStorage.getItem('jwt')
-    console.log(token);
+    // console.log(token);
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const Class = () => {
         Authorization: 'Bearer ' + token
       }
     }
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/find/${className}`, config)
+    axios.get(`http://localhost:5000/class/find/${className}`, config)
       .then((res) => {
         setclassName('')
         toast.success('Join the class successfully')
@@ -41,7 +41,7 @@ const Class = () => {
   const id = localStorage.getItem("id")
   const [dataClases, setdataClases] = useState()
   useEffect(() => {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/student/${id}`)
+    axios.get(`http://localhost:5000/class/student/${id}`)
     .then(res =>{
       const dataClases = res.data
       setdataClases(dataClases)
@@ -49,9 +49,9 @@ const Class = () => {
   }, [className,id])
 
   useEffect(() => {
-    axios.get('https://gold-shiny-lemming.cyclic.cloud/class/all')
+    axios.get('http://localhost:5000/class/all')
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setClasses(res.data)
     })
     .catch(err => console.log(err))
@@ -124,7 +124,7 @@ const Class = () => {
                 await localStorage.setItem("teacherName", classItem.teacherName)
                 return(
                   setTimeout(() => {
-                    window.location.replace(`https://tech-edu.vercel.app/class/detail/${classItem._id}`)
+                    window.location.replace(`http://localhost:3000/class/detail/${classItem._id}`)
                   },2000)
                   
                 

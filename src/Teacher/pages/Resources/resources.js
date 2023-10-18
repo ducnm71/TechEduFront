@@ -10,7 +10,7 @@ const Resources = () => {
   const [total, setTotal] = useState()
   const [detail, setDetail] = useState()
   useEffect(() => {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/resources/detail/${current}`)
+    axios.get(`http://localhost:5000/resources/detail/${current}`)
       .then((res) => {
         setDetail(res.data.result)
         setTotal(res.data.count)

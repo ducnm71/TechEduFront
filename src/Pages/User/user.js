@@ -10,7 +10,7 @@ const User = () => {
   const [in4, setIn4] = useState()
 
   useEffect(() => {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/student/in4/${id}`)
+    axios.get(`http://localhost:5000/student/in4/${id}`)
       .then((res) => {
         setIn4([res.data]);
       })

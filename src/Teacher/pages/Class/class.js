@@ -28,7 +28,7 @@ const TClass = () => {
   const [dataClases, setdataClases] = useState()  
 
   useEffect(() => {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/teacher/${id}`)
+    axios.get(`http://localhost:5000/class/teacher/${id}`)
     .then(res =>{
       setdataClases(res.data)
     })
@@ -37,7 +37,7 @@ const TClass = () => {
 
   const handleCreate = async (e) => {
     e.preventDefault()
-    axios.post(`https://gold-shiny-lemming.cyclic.cloud/class/create`,{
+    axios.post(`http://localhost:5000/class/create`,{
       id: input.id,
       name: input.name,
       img: input.img,
@@ -120,7 +120,7 @@ const TClass = () => {
                 await localStorage.setItem("classId", classItem.id)
                 await localStorage.setItem("teacherImg", classItem.teacherImg)
                 setTimeout(() => {
-                    window.location.replace(`https://tech-edu.vercel.app/detail/${classItem._id}`)
+                    window.location.replace(`http://localhost:3000/detail/${classItem._id}`)
                   },2000)
                   
                 

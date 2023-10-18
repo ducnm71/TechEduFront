@@ -46,7 +46,7 @@ const Login = () => {
 
 const submitFormLogin = async (e) => {
     e.preventDefault()
-    await axios.post(`https://gold-shiny-lemming.cyclic.cloud/${user.role}/login`,
+    await axios.post(`http://localhost:5000/${user.role}/login`,
     {
         email: user.email,
         password: user.password
@@ -56,7 +56,7 @@ const submitFormLogin = async (e) => {
         console.log(res.data);
         toast.success("Sign in successfully!");
         setTimeout(() =>{
-            window.location.replace("https://tech-edu.vercel.app/")
+            window.location.replace("http://localhost:3000/")
         }, 1500)
         await localStorage.setItem("jwt", res.data.jwt)
         await localStorage.setItem("role", user.role)
@@ -71,7 +71,7 @@ const submitFormLogin = async (e) => {
 
 const submitFormRegist = async (e) =>{
     e.preventDefault()
-    await axios.post(`https://gold-shiny-lemming.cyclic.cloud/${register.role}/register`,
+    await axios.post(`http://localhost:5000/${register.role}/register`,
         {
         name: register.name,
         email: register.email,
@@ -83,7 +83,7 @@ const submitFormRegist = async (e) =>{
             await localStorage.setItem("jwt", res.data.jwt)
             await localStorage.setItem("role", register.role)
             setTimeout(() => {
-                window.location.replace("https://tech-edu.vercel.app/")
+                window.location.replace("http://localhost:3000/")
             }, 1500)
         })
         .catch(error=> {

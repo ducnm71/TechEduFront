@@ -17,7 +17,7 @@ const News = () => {
           onClick={(e)=>{
             e.preventDefault()
             return (
-              window.location.replace('https://tech-edu.vercel.app/news/apply')
+              window.location.replace('http://localhost:3000/news/apply')
             )
           }}>
           <h3>{item}</h3>

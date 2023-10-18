@@ -58,7 +58,7 @@ const Header = () => {
             to=""
             onClick={() => {
               localStorage.clear();
-              window.location.replace("https://tech-edu.vercel.app/");
+              window.location.replace("http://localhost:3000/");
             }}
           >
             <box-icon name="log-out" size="md"></box-icon>

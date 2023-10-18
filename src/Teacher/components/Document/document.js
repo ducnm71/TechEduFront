@@ -17,7 +17,7 @@ const Document = () => {
   const [document, setDocument] = useState()
 
   useEffect(()=> {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/document/${classId}`)
+    axios.get(`http://localhost:5000/class/document/${classId}`)
       .then(async(res) => {
         setDocument(res.data)
       })
@@ -29,7 +29,7 @@ const Document = () => {
   const handleUpload = async (e) => {
 
     e.preventDefault()
-    await axios.put('https://gold-shiny-lemming.cyclic.cloud/class/uploadDocument',{
+    await axios.put('http://localhost:5000/class/uploadDocument',{
       name: input.name,
       link: input.link,
       date: new Date().toLocaleDateString(),

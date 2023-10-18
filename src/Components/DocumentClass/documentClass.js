@@ -13,7 +13,7 @@ const Exercise = () => {
   const defaultOption = options[0];
 
   useEffect(()=> {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/class/document/${classId}`)
+    axios.get(`http://localhost:5000/class/document/${classId}`)
       .then(async(res) => {
         setDocument(res.data)
       })

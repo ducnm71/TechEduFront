@@ -11,7 +11,7 @@ const TUser = () => {
 
 
   useEffect(() => {
-    axios.get(`https://gold-shiny-lemming.cyclic.cloud/teacher/in4/${id}`)
+    axios.get(`http://localhost:5000/teacher/in4/${id}`)
       .then((res) => {
         setIn4(res.data);
       })

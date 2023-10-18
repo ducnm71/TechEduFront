@@ -202,3 +202,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
                 </tr>
               );
             })}
+
+
+
+
+
+     BE deploy:   https://gold-shiny-lemming.cyclic.cloud
+
+    local:  http://localhost:5000
